@@ -14,7 +14,7 @@ const User = new GraphQLObjectType({
     id: {
       type: GraphQLID,
       description: 'The ID of this user',
-      resolve: user => user._id, // eslint-disable-line no-underscore-dangle
+      resolve: user => user._id,
     },
     type: {
       type: GraphQLString,
@@ -44,7 +44,7 @@ const User = new GraphQLObjectType({
     },
     bio: {
       type: GraphQLString,
-      description: 'The biograph for this user',
+      description: 'The biography for this user',
     },
     channel: {
       type: Channel,
