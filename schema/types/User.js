@@ -1,5 +1,3 @@
-// https://github.com/justintv/Twitch-API/blob/master/v3_resources/users.md
-
 const {
   GraphQLObjectType,
   GraphQLString,

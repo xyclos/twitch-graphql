@@ -5,8 +5,8 @@ const {
   GraphQLString,
 } = require('graphql')
 
-const { User } = require('./types')
-const { getUser } = require('../api')
+const { User, Summary } = require('./types')
+const { getUser, getStreamSummary } = require('../api')
 
 const rootQueryType = new GraphQLObjectType({
   name: 'Twitch',
@@ -21,12 +21,16 @@ const rootQueryType = new GraphQLObjectType({
       },
       resolve: async (root, { name }) => await getUser(name),
     },
+    summary: {
+      type: Summary,
+      resolve: async (root, {}) => await getStreamSummary()
+    }
   }),
 });
 
 const TwitchSchema = new GraphQLSchema({
   query: rootQueryType,
-  types: [User],
+  types: [User, Summary],
 });
 
 module.exports = TwitchSchema;
