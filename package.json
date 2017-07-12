@@ -13,10 +13,10 @@
   "author": "Jake Johnson <jakej587@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.0",
-    "express-graphql": "^0.5.4",
-    "graphql": "^0.7.0",
-    "node-fetch": "^1.6.0",
+    "express": "^4.15.3",
+    "express-graphql": "^0.6.6",
+    "graphql": "^0.10.3",
+    "node-fetch": "^1.7.1",
     "nodemon": "^1.10.2"
   }
 }
