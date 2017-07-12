@@ -1,17 +1,16 @@
-import {
+const {
   GraphQLObjectType,
   GraphQLSchema,
   GraphQLNonNull,
   GraphQLString,
-} from 'graphql';
+} = require('graphql')
 
-import { User } from './types';
-import { getUser } from '../api';
+const { User } = require('./types')
+const { getUser } = require('../api')
 
 const rootQueryType = new GraphQLObjectType({
   name: 'Twitch',
   fields: () => ({
-    // https://github.com/justintv/Twitch-API/blob/master/v3_resources/users.md#get-usersuser
     user: {
       type: User,
       args: {
@@ -30,4 +29,4 @@ const TwitchSchema = new GraphQLSchema({
   types: [User],
 });
 
-export default TwitchSchema;
+module.exports = TwitchSchema;

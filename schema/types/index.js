@@ -1,4 +1,11 @@
-export Stream from './Stream';
-export Preview from './Preview';
-export Channel from './Channel';
-export User from './User';
+const Stream = require('./Stream')
+const Preview = require('./Preview')
+const Channel =  require('./Channel')
+const User = require('./User')
+
+module.exports = {
+  Stream,
+  Preview,
+  Channel,
+  User
+}

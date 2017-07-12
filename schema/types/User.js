@@ -1,13 +1,13 @@
 // https://github.com/justintv/Twitch-API/blob/master/v3_resources/users.md
 
-import {
+const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLID,
-} from 'graphql';
+} = require('graphql')
 
-import { getChannel } from '../../api';
-import Channel from './Channel';
+const { getChannel } = require('../../api')
+const Channel = require('./Channel')
 
 const User = new GraphQLObjectType({
   name: 'User',
@@ -56,4 +56,4 @@ const User = new GraphQLObjectType({
   }),
 });
 
-export default User;
+module.exports = User;

@@ -1,15 +1,15 @@
 // https://github.com/justintv/Twitch-API/blob/master/v3_resources/streams.md
 
-import {
+const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
   GraphQLFloat,
   GraphQLID,
   GraphQLBoolean,
-} from 'graphql';
+} = require('graphql')
 
-import Preview from './Preview';
+const Preview = require('./Preview')
 
 const Stream = new GraphQLObjectType({
   name: 'Stream',
@@ -59,4 +59,4 @@ const Stream = new GraphQLObjectType({
   }),
 });
 
-export default Stream;
+module.exports = Stream;

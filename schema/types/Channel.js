@@ -1,15 +1,15 @@
 // https://github.com/justintv/Twitch-API/blob/master/v3_resources/channels.md
 
-import {
+const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
   GraphQLBoolean,
   GraphQLID,
-} from 'graphql';
+} = require('graphql')
 
-import Stream from './Stream';
-import { getStream } from '../../api';
+const Stream = require('./Stream')
+const { getStream } = require('../../api')
 
 const Channel = new GraphQLObjectType({
   name: 'Channel',
@@ -112,4 +112,4 @@ const Channel = new GraphQLObjectType({
   }),
 });
 
-export default Channel;
+module.exports = Channel;

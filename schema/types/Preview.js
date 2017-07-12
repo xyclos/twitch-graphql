@@ -1,7 +1,7 @@
-import {
+const {
   GraphQLObjectType,
   GraphQLString,
-} from 'graphql';
+} = require('graphql')
 
 const Preview = new GraphQLObjectType({
   name: 'Preview',
@@ -26,4 +26,4 @@ const Preview = new GraphQLObjectType({
   }),
 });
 
-export default Preview;
+module.exports = Preview;

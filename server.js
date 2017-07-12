@@ -1,17 +1,17 @@
-import express from 'express';
-import graphqlHttp from 'express-graphql';
-import schema from './schema';
+const express = require('express')
+const graphqlHttp = require('express-graphql')
+const schema = require('./schema')
 
-const app = express();
+const app = express()
 
 app.use('/twitch/graphql', graphqlHttp({
   schema,
   graphiql: true,
-  pretty: true,
-}));
+  pretty: true
+}))
 
 const server = app.listen(8080, () => {
-  const { port } = server.address();
+  const { port } = server.address()
 
-  console.log(`Server listening on port ${port}`);
-});
+  console.log(`Server listening on port ${port}`)
+})
