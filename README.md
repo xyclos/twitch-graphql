@@ -1,6 +1,18 @@
 # twitch-graphql
 A **work-in-progress** wrapper implementation of the [Twitch v5 API](https://dev.twitch.tv/docs) in [GraphQL](http://graphql.org/).
 
+## Setup
+
+Create a file in the project root called secrets.js. Export something like this:
+
+```
+{
+  twitch: {
+    clientId: '<YOUR TWITCH CLIENT ID>'
+  }
+}
+```
+
 ## Running
 Just run the following commands:
 
